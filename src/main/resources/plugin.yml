@@ -1,0 +1,4 @@
+name: item_test2
+version: '${project.version}'
+main: dev.minejerik.itemplugin.item_test2.Item_test2
+api-version: '1.20'
