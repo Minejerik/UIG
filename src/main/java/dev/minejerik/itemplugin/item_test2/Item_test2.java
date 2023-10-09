@@ -21,6 +21,7 @@ public final class Item_test2 extends JavaPlugin {
             Logger logger = this.getLogger();
             logger.severe(e.getMessage());
         }
+
     }
 
     @Override
