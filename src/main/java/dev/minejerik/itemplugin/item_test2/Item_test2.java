@@ -14,7 +14,7 @@ public final class Item_test2 extends JavaPlugin {
     public void onEnable() {
         try {
             Logger logger = this.getLogger();
-            this.loader = new player_info_loader();
+            this.loader = new player_info_loader(logger);
             join_listener temp = new join_listener();
             temp.logger = logger;
             temp.loader = this.loader;
@@ -29,6 +29,6 @@ public final class Item_test2 extends JavaPlugin {
 
     @Override
     public void onDisable() {
-//        player_info_loader.save_info();
+        player_info_loader.save_info();
     }
 }
