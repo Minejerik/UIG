@@ -15,8 +15,11 @@ public final class Item_test2 extends JavaPlugin {
         try {
             Logger logger = this.getLogger();
             this.loader = new player_info_loader();
+            join_listener temp = new join_listener();
+            temp.logger = logger;
+            temp.loader = this.loader;
             logger.info("Start Initialization");
-            getServer().getPluginManager().registerEvents(new join_listener(loader), this);
+            getServer().getPluginManager().registerEvents(temp, this);
         } catch (Exception e) {
             Logger logger = this.getLogger();
             logger.severe(e.getMessage());

@@ -25,7 +25,11 @@ public class player_info_loader {
 
     public boolean did_player_get_items(Player player){
         Integer temp = this.player_info.get(player.getUniqueId().toString());
-        return temp == 1;
+        if (temp == null){
+            return false;
+        } else {
+            return temp == 1;
+        }
     }
 
     public void set_player_got_items(Player player){
